@@ -35,7 +35,14 @@ const Get = {
       this.code = `${Get.UC_CODE}invalidDtoIn`;
       this.message = "DtoIn is not valid.";
     }
-  }
+  },
+  JokesDoesNotExist: class extends ErrorBase {
+    constructor() {
+      super(...arguments);
+      this.code = `${Update.UC_CODE}jokesDoesNotExist`;
+      this.message = "UuObject jokes does not exist.";
+    }
+  },
 };
 
 const Delete = {
@@ -59,7 +66,37 @@ const Update = {
       this.code = `${Update.UC_CODE}invalidDtoIn`;
       this.message = "DtoIn is not valid.";
     }
+  },
+  JokesDoesNotExist: class extends ErrorBase {
+    constructor() {
+      super(...arguments);
+      this.code = `${Update.UC_CODE}jokesDoesNotExist`;
+      this.message = "UuObject jokes does not exist.";
+    }
+  },
+  UserNotAuthorized: class extends ErrorBase {
+    constructor() {
+      super(...arguments);
+      this.code = `${Update.UC_CODE}userNotAuthorized`;
+      this.message = "User not authorized.";
+    }
+  },
+  TextCannotBeRemoved: class extends ErrorBase {
+    constructor() {
+      super(...arguments);
+      this.code = `${Update.UC_CODE}textCannotBeRemoved`;
+      this.message = "Text cannot be removed if joke would end up without both text and image.";
+    }
+  },
+  JokeDaoUpdateFailed: class extends ErrorBase {
+    constructor() {
+      super(...arguments);
+      this.code = `${Update.UC_CODE}jokeDaoUpdateFailed`;
+      this.message = "Update joke by joke Dao update failed.";
+    }
   }
+
+
 };
 
   module.exports = {

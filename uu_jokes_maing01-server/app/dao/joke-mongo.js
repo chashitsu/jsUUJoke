@@ -16,12 +16,16 @@ class JokeMongo extends UuObjectDao {
   }
 
   async getById(awid,id) {
-    // todo - jak tohle funguje???
-    return await super.find( { awid, id } );
+    return await super.findOne( { awid, id } );
   }
 
   async deleteById(awid, id) {
     return await super.deleteOne({ awid, id });
+  }
+
+  async update(uuObject) {
+    let filter = { id: uuObject.id, awid: uuObject.awid };
+    return await super.findOneAndUpdate(filter, uuObject, "NONE");
   }
 
 }

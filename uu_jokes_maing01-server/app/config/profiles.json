@@ -23,23 +23,23 @@
       },
       "joke/create": {
         "sysStateList": ["active"],
-        "profileList": ["Public"]
+        "profileList": ["Authorities","Executives"]
       },
       "joke/list": {
         "sysStateList": ["active"],
-        "profileList": ["Authorities","Executives"]
+        "profileList": ["Authorities","Executives", "Readers"]
       },
       "joke/get": {
         "sysStateList": ["active"],
-        "profileList": ["Public"]
+        "profileList": ["Authorities","Executives", "Readers"]
       },
       "joke/delete": {
         "sysStateList": ["active"],
-        "profileList": ["Public"]
+        "profileList": ["Authorities","Executives"]
       },
       "joke/update": {
         "sysStateList": ["active"],
-        "profileList": ["Public"]
+        "profileList": ["Authorities","Executives"]
       }
     }
   }
