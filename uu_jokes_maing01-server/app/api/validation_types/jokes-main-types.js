@@ -17,7 +17,4 @@ const sayHelloDtoInType = shape({
   name: string(20)
 });
 
-const jokeCreateDtoInType = shape({
-  name: string(255).isRequired(),
-  text: string(4000)
-});
+

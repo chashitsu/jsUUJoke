@@ -15,9 +15,6 @@ const WARNINGS = {
   } ,
   sayHelloUnsupportedKeys:{
     code: `${Errors.SayHello.UC_CODE}unsupportedKeys`
-  },
-  jokeCreateUnsupportedKeys:{
-    code: `${Errors.JokeCreate.UC_CODE}unsupportedKeys`
   }
 };
 
@@ -51,31 +48,6 @@ class JokesMainAbl {
     `;
 
     return dtoOut;
-  }
-
-  async jokeCreate( dtoIn, awid, uuAppErrorMap = {}) {
-
-    let validationResult = this.validator.validate("jokeCreateDtoInType", dtoIn);
-
-    uuAppErrorMap = ValidationHelper.processValidationResult(
-      dtoIn,
-      validationResult,
-      uuAppErrorMap,
-      WARNINGS.jokeCreateUnsupportedKeys.code,
-      Errors.JokeCreate.InvalidDtoIn
-    );
-
-    const jokeCreateDtoOut = {
-      name: dtoIn.name,
-      text: dtoIn.text,
-      visibility: '...',
-      uuIdentity: '...',
-      uuIdentityName: '...',
-      awid: awid,
-      uuAppErrorMap: {}
-    };
-
-    return jokeCreateDtoOut;
   }
 
   async init(uri, dtoIn, session) {

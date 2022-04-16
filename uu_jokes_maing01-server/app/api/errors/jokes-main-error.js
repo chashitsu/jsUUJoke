@@ -39,7 +39,7 @@ const Init = {
 };
 
 const SayHello = {
-  UC_CODE: `${JokesMainUseCaseError.JOKES_MAIN_ERROR_PREFIX}sayHello/`, 
+  UC_CODE: `${JokesMainUseCaseError.JOKES_MAIN_ERROR_PREFIX}sayHello/`,
   InvalidDtoIn: class extends JokesMainUseCaseError {
     constructor() {
       super(...arguments);
@@ -49,19 +49,9 @@ const SayHello = {
   },
 };
 
-const JokeCreate = {
-  UC_CODE: `${JokesMainUseCaseError.JOKES_MAIN_ERROR_PREFIX}joke/create/`, 
-  InvalidDtoIn: class extends JokesMainUseCaseError {
-    constructor() {
-      super(...arguments);
-      this.code = `${JokeCreate.UC_CODE}invalidDtoIn`;
-      this.message = "DtoIn is not valid.";
-    }
-  },
-};
+
 
 module.exports = {
-  JokeCreate,
   SayHello,
   Init,
 };

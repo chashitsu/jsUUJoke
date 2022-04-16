@@ -24,6 +24,22 @@
       "joke/create": {
         "sysStateList": ["active"],
         "profileList": ["Public"]
+      },
+      "joke/list": {
+        "sysStateList": ["active"],
+        "profileList": ["Authorities","Executives"]
+      },
+      "joke/get": {
+        "sysStateList": ["active"],
+        "profileList": ["Public"]
+      },
+      "joke/delete": {
+        "sysStateList": ["active"],
+        "profileList": ["Public"]
+      },
+      "joke/update": {
+        "sysStateList": ["active"],
+        "profileList": ["Public"]
       }
     }
   }
